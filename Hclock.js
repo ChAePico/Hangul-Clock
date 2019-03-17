@@ -1,5 +1,6 @@
 let midTime=false;
 let midND=false;
+const table=document.querySelector("table");
 
 function mid(hour, minute){
 	if(minute===0){
@@ -51,7 +52,17 @@ function checkHour(hour){
 	}
 }
 function checkMinute(minute){
-	
+	const bun=document.getElementById("bun");
+	bun.style.color="#424242";
+	if(){
+
+	}
+	else if(){
+
+	}
+	else if(){
+		
+	}
 }
 function getTime(){
 	const date=new Date();
@@ -70,5 +81,6 @@ function getTime(){
 function init(){
 	getTime();
 	setInterval(getTime, 60000);
+	table.style.color="#424242";
 }
 init();
