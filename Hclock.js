@@ -94,7 +94,7 @@ function clearColor(){
 function init(){
 	getTime();
 	setInterval(getTime, 60000);
-	window.setTimeout('window.location.reload()',60000);
+	window.setTimeout('window.location.reload()',30000);
 	//setInterval(clearColor, 60000);
 	//table.style.color="#424242";
 }
