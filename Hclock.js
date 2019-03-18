@@ -78,6 +78,6 @@ function getTime(){
 function init(){
 	getTime();
 	setInterval(getTime, 60000);
-	table.style.color="#424242";
+	//table.style.color="#424242";
 }
 init();
