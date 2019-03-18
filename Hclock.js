@@ -1,6 +1,5 @@
 let midTime=false;
 let midND=false;
-const table=document.querySelector("table");
 
 function mid(hour, minute){
 	if(minute===0){
@@ -54,11 +53,13 @@ function checkHour(hour){
 function checkMinute(minute){
 	const bun=document.getElementById("bun");
 	bun.style.color="aliceblue";
-	var stringMinute=minute.toString();
-	stringMinute+="-min";
-	console.log(stringMinute);
-	if(minute<10){
-		
+	var stringMinute1=(minute%10).toString();
+	stringMinute1+="-min";
+	console.log(stringMinute1);
+	const minuteLess10=document.getElementsByName(stringMinute1);
+	minuteLess10[0].style.color="aliceblue";
+	if(minute>10){
+
 	}
 }
 function getTime(){
@@ -74,10 +75,16 @@ function getTime(){
 		checkMinute(minutes);
 	}
 }
+function clearColor(){
+	let table=document.getElementById("table");
+	table.style.color="#424242";
+}
 
 function init(){
 	getTime();
 	setInterval(getTime, 60000);
+	window.setTimeout('window.location.reload()',60000);
+	//setInterval(clearColor, 60000);
 	//table.style.color="#424242";
 }
 init();
