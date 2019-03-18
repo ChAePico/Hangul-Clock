@@ -53,14 +53,11 @@ function checkHour(hour){
 }
 function checkMinute(minute){
 	const bun=document.getElementById("bun");
-	bun.style.color="#424242";
-	if(){
-
-	}
-	else if(){
-
-	}
-	else if(){
+	bun.style.color="aliceblue";
+	var stringMinute=minute.toString();
+	stringMinute+="-min";
+	console.log(stringMinute);
+	if(minute<10){
 		
 	}
 }
