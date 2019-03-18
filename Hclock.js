@@ -53,13 +53,22 @@ function checkHour(hour){
 function checkMinute(minute){
 	const bun=document.getElementById("bun");
 	bun.style.color="aliceblue";
-	var stringMinute1=(minute%10).toString();
+	let stringMinute1=(minute%10).toString();
 	stringMinute1+="-min";
 	console.log(stringMinute1);
 	const minuteLess10=document.getElementsByName(stringMinute1);
 	minuteLess10[0].style.color="aliceblue";
-	if(minute>10){
-
+	let intMinute10=parseInt(minute/10);
+	console.log(intMinute10);
+	if(intMinute10!==0){
+		let stringMinute10=intMinute10.toString()+"0";
+		console.log(stringMinute10);
+		let bun10=document.getElementsByName("0-min");
+		bun10[0].style.color="aliceblue";
+		if(intMinute10!==1){
+			let bunMore=document.getElementsByName(stringMinute10);
+			bunMore[0].style.color="aliceblue";
+		}
 	}
 }
 function getTime(){
@@ -75,10 +84,12 @@ function getTime(){
 		checkMinute(minutes);
 	}
 }
+/*
 function clearColor(){
 	let table=document.getElementById("table");
 	table.style.color="#424242";
 }
+*/
 
 function init(){
 	getTime();
