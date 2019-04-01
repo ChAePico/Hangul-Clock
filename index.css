@@ -48,7 +48,7 @@ body{
 	z-index: -1;
 	animation: fadeIn 1s linear;
 }
-ul{
+#topMenu ul{
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
@@ -59,7 +59,7 @@ ul:after{
 	display: block;
 	clear: both;
 }
-li{
+#topMenu li{
 	float: left;
 }
 li a{
