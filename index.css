@@ -1,5 +1,5 @@
 body{
-	background-color: gray;
+	background-color: aliceblue;
 }
 .css-clock{
 	background-color: rgba(0,0,0,0.6);
@@ -48,6 +48,9 @@ body{
 	z-index: -1;
 	animation: fadeIn 1s linear;
 }
+ul{
+	list-style-type: none;
+}
 #topMenu ul{
 	list-style-type: none;
 	margin: 0;
@@ -62,16 +65,16 @@ ul:after{
 #topMenu li{
 	float: left;
 }
-li a{
+#topMenu li a{
 	display: block;
 	color: white;
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
 }
-li a:hover:not(.active){
+#topMenu li a:hover:not(.active){
 	background-color: rgba(17,17,17,0.6);
 }
-.active{
+#topMenu .active{
 	background-color: slateblue;
 }
